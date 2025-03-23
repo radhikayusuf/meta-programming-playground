@@ -17,7 +17,7 @@ class Main {
             manualParser.parse(json)
         }
 
-        benchmark("CTMP") {
+        benchmark("RTMP") {
             rtmpParser.parse(json)
         }
 
