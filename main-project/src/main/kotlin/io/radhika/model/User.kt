@@ -1,7 +1,9 @@
 package io.radhika.model
 
 import com.google.gson.annotations.SerializedName
+import io.radhika.JsonSerializable
 
+@JsonSerializable
 data class User(
     @SerializedName("first_name")
     val firstName: String? = null,

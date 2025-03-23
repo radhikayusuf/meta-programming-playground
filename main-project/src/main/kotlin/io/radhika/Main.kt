@@ -1,5 +1,6 @@
 package io.radhika
 
+import io.radhika.parser.CTMP
 import io.radhika.parser.Manual
 import io.radhika.parser.Parser
 import io.radhika.parser.RTMP
@@ -8,6 +9,7 @@ import kotlin.math.roundToInt
 class Main {
     private val manualParser: Parser = Manual()
     private val rtmpParser: Parser = RTMP()
+    private val ctmpParser: Parser = CTMP()
 
     fun runPlayground() {
         val json = """{"first_name":"Foo", "last_name":"Bar", "age":25, "phone_number":"08111111111"}"""
@@ -17,6 +19,10 @@ class Main {
 
         benchmark("RTMP") {
             rtmpParser.parse(json)
+        }
+
+        benchmark("CTMP") {
+            ctmpParser.parse(json)
         }
     }
 
