@@ -1,0 +1,7 @@
+/main-project/build/generated/ksp/main/kotlin/
+/main-project/build/
+/annotations/build/
+/processor/build/
+/.gradle/
+/.idea/
+/build/
